@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    
+  </head>
+  <body>
+
+    <div class="container">
+      <h1><button id="myButton">Refresh Me</button></h1>
+      <br>
+      
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img id="img1" src="./images/0.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img id="img2" src="./images/0.png">
+      </div>
+
+    </div>
+
+<script>
+
+var a=0;
+var b=0;
+function randomNumber(){
+a = Math.round(Math.random()*5)+1;
+b = Math.round(Math.random()*5)+1;  
+var imageA = document.getElementById('img1');
+var imageB = document.getElementById('img2');
+if (a==1){
+    imageA.src = './images/1.png';
+}
+if (b==1){
+    imageB.src = './images/1.png';
+}
+if (a==2){
+    imageA.src = './images/2.png';
+}
+if (b==2){
+    imageB.src = './images/2.png';
+}
+if (a==3){
+    imageA.src = './images/3.png';
+}
+if (b==3){
+    imageB.src = './images/3.png';
+}
+if (a==4){
+    imageA.src = './images/4.png';
+}
+if (b==4){
+    imageB.src = './images/4.png';
+}
+if (a==5){
+    imageA.src = './images/5.png';
+}
+if (b==5){
+    imageB.src = './images/5.png';
+}
+if (a==6){
+    imageA.src = './images/6.png';
+}
+if (b==6){
+    imageB.src = './images/6.png';
+}
+}
+var button = document.getElementById('myButton');
+button.addEventListener('click', randomNumber);
+
+
+</script>
+  </body>
+
+  <footer>
+  Miguel Padilla
+  </footer>
+</html>
